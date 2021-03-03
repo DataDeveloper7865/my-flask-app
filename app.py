@@ -2,6 +2,18 @@ from flask import Flask
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    """ Show homepage"""
+
+    return """
+        <html>
+            <body>
+                <h1> I am the landing page </h1>
+            </body>
+        </html>
+        """
+
 @app.route('/hello')
 def say_hello():
     """Return simple "Hello" Greeting."""
